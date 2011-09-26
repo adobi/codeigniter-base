@@ -1,0 +1,24 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#Rewrite all other URLs to index.php/URL
+#RewriteRule .* index.php/$0 [PT]
+#RewriteRule ^.*$ index.php [NC,L]
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+Header unset ETag
+FileETag None
+
+<FilesMatch "(?i)^.*\.(ico|flv|jpg|jpeg|png|gif|js|css|ttf)$">
+    Header unset Last-Modified
+    Header set Expires "Fri, 21 Dec 2013 00:00:00 GMT"
+    Header set Cache-Control "public, no-transform"
+</FilesMatch>
+
+<IfModule mod_deflate.c>
+	<FilesMatch "\.(js|css|ttf)$">
+		SetOutputFilter DEFLATE
+	</FilesMatch>
+</IfModule>
