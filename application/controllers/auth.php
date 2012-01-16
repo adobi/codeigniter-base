@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 
 if (! defined('BASEPATH')) exit('No direct script access');
 
@@ -32,7 +32,10 @@ class Auth extends MY_Controller
         
         //$user = $this->users->login($_POST['username'], md5($_POST['password']));
         //dump($_POST); die;
-        if ($_POST['username'] === 'admin' && md5($_POST['password']) === md5('a')) {
+		
+		$this->config->load('user');
+		
+        if ($_POST['username'] === $this->config->item('username') && md5($_POST['password']) === md5($this->config->item('password'))) {
             
             $this->session->set_userdata('logged_in', true);
             
