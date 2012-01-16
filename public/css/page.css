@@ -1,0 +1,225 @@
+﻿.tabs a {
+    border:1px solid #ddd!important;
+}
+.tabs span, .pills span {
+    font-weight:bold;
+    position:relative;
+    top:10px;
+    padding: 0 10px;
+    display:inline-block;
+    color:#000;
+}
+
+#main-nav {
+    margin-top:30px;
+}
+
+#main-nav li a {
+    border:0px!important;
+}
+
+#main-nav .active a {
+    border:1px solid #ddd !important;
+    border-bottom:0px!important;
+}
+
+.item {
+    background:rgba(0, 0, 0, 0.0); 
+    //border-bottom:1px solid #eee;
+    padding:5px;//width:930px;
+    border-radius: 3px;
+    margin-bottom:0px;
+    border-bottom:1px solid #ddd;
+    //width:300px!important;
+    margin-right:10px!important; margin-left:0px!important;
+}
+
+
+.item-header {
+    background:rgba(0, 0, 0, 0.05); 
+    font-weight:bold; font-size:1.1em;
+    border-bottom:1px solid #ddd;
+    padding-bottom:8px;
+    margin-bottom:0px;
+}
+
+#video-items .item {
+    //width:450px!important;
+}
+/*
+#video-items .item:nth-child(even), .store-items .item:nth-child(even) {
+    float:right!important;
+    margin-right:0px!important;
+}
+*/
+.item-nav {
+    text-align: right;
+}
+    .item-nav a {
+        margin-right:10px;
+    }
+    
+#upload-image-form {
+    margin-bottom:0px!important;
+}
+
+#rate-star {
+    margin-top:8px;
+}
+
+.star {
+    display:inline-block;
+}
+
+.sortable-item {
+    display:inline-block;
+    float:left; margin-right:10px; margin-bottom:10px; background:#eee; padding:3px; border-radius:3px;
+}
+
+.sortable-item img, .sortable-wrapper .title {
+    cursor:move;
+}
+
+#loading-global {
+    background: #FFF1A8;//#D8DFEA;
+    display: none;
+    font-size: 12px;
+    font-weight: bold;
+    left: 0;
+    padding: 10px 30px 10px 30px;
+    position: fixed;
+    top: 0;
+    left:45%;
+    z-index: 9999;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+
+.clearfix:nth-child(even) {
+    background:#fafafa;
+    border-top:1px solid #f1f1f1;
+    border-bottom:1px solid #f1f1f1;
+    padding:18px 0;
+    //margin-bottom:0px;
+}
+.separator {
+    background:#E6F4F9;
+    border-radius:4px;
+    border:1px solid rgba(16,153,199,0.15);
+}
+
+i {
+    margin-right:5px;
+}
+
+.nav .cug {
+	margin-top:3px;
+	margin-right:5px;
+}
+
+table td  {
+    vertical-align:middle;
+}
+
+.center {
+    text-align:center;
+}
+
+.right {
+    text-align:right;
+}
+
+.popover .title, .popover .content {
+    text-align:left!important;
+}
+
+table thead th {
+    background-color: rgba(141, 192, 219, 0.25);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+.rumor-image {
+    margin:0 auto;
+}
+
+.new-rumor {
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    vertical-align: middle;
+    vertical-align: text-top;
+    background: url('../images/td_web_sprite_icons.png')!important;
+    width: 22px;
+    height:21px;
+    background-position: -60px -50px!important;
+    margin-top:-3px;  
+    opacity:0.25;
+}
+
+.nav .active .new-rumor, .settings, .nav .active .w {
+    opacity:1!important;
+}
+
+.settings {
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    vertical-align: middle;
+    vertical-align: text-top;
+    background: url('../images/td_web_sprite_icons.png');
+    width: 25px;
+    height: 21px;
+    background-position: -120px -50px;
+    margin-top:-4px;
+    margin-right:0px;
+    opacity:0.25;
+}
+
+.secondary {
+    font-size:16px;
+    margin-left:20px;
+}
+
+.pagination a:hover, .pagination .active a {
+  background-color: #FFDBED;
+  background-color: rgba(141, 192, 219, 0.25);
+}
+
+/*
+.pagination a {
+    color:#FE0086;
+}
+
+.pagination .active a {
+    background:#ddd;
+}
+*/
+
+.active-rumor {
+    background:#FFEDED;//#F7EEDC;
+}
+.inactive-rumor {
+    background:#E6F2DE;//#E6F7DC;
+}
+
+.btn-large {
+    border-radius: 6px 6px 6px 6px;
+    font-size: 20px;
+    margin-right: 5px;
+    padding: 14px 24px;
+}
+.orange {
+    background-color: #E16020;
+    background-image: -moz-linear-gradient(center top , #F86218, #F86218 25%, #CB4909)!important;
+    border-color: #B94106!important;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.orange:hover {
+    background: none repeat scroll 0 0 #EA5207!important;
+    color: #FFFFFF;
+    text-decoration: none;
+}

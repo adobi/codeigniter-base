@@ -52,7 +52,7 @@ $autoload['packages'] = array(APPPATH.'third_party');
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('session', 'template', 'form_validation', 'MY_Model', 'MY_Controller');
+$autoload['libraries'] = array('database', 'session', 'template', 'form_validation', 'MY_Model', 'upload');
 
 
 
@@ -65,7 +65,7 @@ $autoload['libraries'] = array('session', 'template', 'form_validation', 'MY_Mod
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('cookie', 'url', 'form', 'html', 'debug', 'display_errors', 'to_date', );
+$autoload['helper'] = array('cookie', 'url', 'form', 'html', 'debug', 'display_errors', 'to_date', 'display_flag', 'display_country_name', 'to_time', 'embed_youtube', 'youtube_video_image');
 
 
 /*

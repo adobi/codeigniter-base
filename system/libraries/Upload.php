@@ -149,7 +149,6 @@ class CI_Upload {
 			$this->set_error('upload_no_file_selected');
 			return FALSE;
 		}
-
 		// Is the upload path valid?
 		if ( ! $this->validate_upload_path())
 		{
@@ -255,7 +254,7 @@ class CI_Upload {
 		}
 
 		// Sanitize the file name for security
-		$this->file_name = $this->clean_file_name($this->file_name);
+		$this->file_name = time() . '_' . $this->clean_file_name($this->file_name);
 
 		// Truncate the file name if it's too long
 		if ($this->max_filename > 0)

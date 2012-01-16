@@ -38,7 +38,7 @@ class Template
 
 	private $_theme_locations = array();
 
-	private $_is_mobile = FALSE;
+	private $_is_mobile = false;
 
 	// Minutes that cache will be alive for
 	private $cache_lifetime = 0;
@@ -373,17 +373,6 @@ class Template
 	}
 
 	/**
-	 * Get the current theme
-	 *
-	 * @access public
-	 * @return string	The current theme
-	 */
-	 public function get_theme()
-	 {
-	 	return $this->_theme;
-	 }
-
-	/**
 	 * Get the current theme path
 	 *
 	 * @access	public
@@ -625,7 +614,7 @@ class Template
 		{
 			return TRUE;
 		}
-
+        
 		// Otherwise look in the normal places
 		return file_exists(self::_find_view_folder().'layouts/' . $layout . self::_ext($layout));
 	}
@@ -651,13 +640,13 @@ class Template
 		if ($this->_is_mobile === TRUE AND is_dir($view_folder.'mobile/'))
 		{
 			// Use mobile as the base location for views
-			$view_folder .= 'mobile/';
+			//$view_folder .= 'mobile/';
 		}
 
 		// Use the web version
 		else if (is_dir($view_folder.'web/'))
 		{
-			$view_folder .= 'web/';
+			//$view_folder .= 'web/';
 		}
 
 		// Things like views/admin/web/view admin = subdir
@@ -668,7 +657,7 @@ class Template
 
 		// If using themes store this for later, available to all views
 		$this->_ci->load->vars('template_views', $view_folder);
-		
+		//echo $view_folder; die;
 		return $view_folder;
 	}
 

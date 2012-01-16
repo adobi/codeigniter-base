@@ -38,8 +38,11 @@
 |
 */
 
-$route['default_controller'] = "login";
+$route['default_controller'] = "dashboard";
 $route['404_override'] = '';
+
+$route['games'] = 'press/index';
+$route['games/(:any)'] = 'press/show/$1';
 
 
 /* End of file routes.php */

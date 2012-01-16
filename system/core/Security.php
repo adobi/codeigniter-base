@@ -36,7 +36,7 @@ class CI_Security {
 	protected $_never_allowed_str = array(
 					'document.cookie'	=> '[removed]',
 					'document.write'	=> '[removed]',
-					'.parentNode'		=> '[removed]',
+					//'.parentNode'		=> '[removed]',
 					'.innerHTML'		=> '[removed]',
 					'window.location'	=> '[removed]',
 					'-moz-binding'		=> '[removed]',
