@@ -19,7 +19,7 @@
         <link rel = "stylesheet" href="<?= base_url() ?>css/page.css" media="all" />
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/file-upload/jquery.fileupload-ui.css" media="all" />
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/colorpicker/farbtastic.css" media="all" />
-    	<link rel="stylesheet" href="<?php echo base_url() ?>scripts/plugins/redactor/js/redactor/css/redactor.css" />        
+    	<link rel = "stylesheet" href="<?php echo base_url() ?>scripts/plugins/redactor/js/redactor/css/redactor.css" />        
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/fancybox/jquery.fancybox.css" media="all" />
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/chosen/chosen.css" media="all" />
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/google-code-prettify/prettify.css" media="all" />
@@ -29,28 +29,27 @@
     </head>
     
     <body>    
+        	
         
-    <div id="fb-root"></div>	
-    
-    <?php if ($this->session->userdata('logged_in')): ?>
-        <div class="navbar navbar-fixed">
-          <div class="navbar-inner">
-            <div class="container">
-              <a href="<?php echo  base_url() ?>" class="brand"><?php echo SITE_TITLE ?></a>
-              <ul class="nav">
-                  <li class="active"><a href="<?php echo base_url() ?>dashboard">Dashboard</a></li>
-              </ul>
-              <div class="pull-right">
+        <?php if ($this->session->userdata('logged_in')): ?>
+            <div class="navbar navbar-fixed">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a href="<?php echo  base_url() ?>" class="brand"><?php echo SITE_TITLE ?></a>
                   <ul class="nav">
-                      <li class="vertical-divider"></li>
-                      <li><a href="<?php echo base_url() ?>auth/logout" style="font-weight:bold"><i class="w off-w"></i>Logout</a></li>
+                      <li class="active"><a href="<?php echo base_url() ?>dashboard">Dashboard</a></li>
                   </ul>
+                  <div class="pull-right">
+                      <ul class="nav">
+                          <li class="vertical-divider"></li>
+                          <li><a href="<?php echo base_url() ?>auth/logout" style="font-weight:bold"><i class="w off-w"></i>Logout</a></li>
+                      </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>    
-    <?php endif ?>    
-    <div class="container" id="top">
-    	<div class="content" style="margin-top:70px;">
+            </div>    
+        <?php endif ?>    
+        <div class="container" id="top">
+        	<div class="content" style="margin-top:70px;">
 
                 
