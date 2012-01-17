@@ -19,9 +19,6 @@ if ($_SERVER['HTTP_HOST'] === 'localhost') {
     $config['base_url']	= 'http://localhost/codeigniter-base/public/';    
 } else {
     
-    //echo '<pre>'; print_r($_SERVER);
-    
-    //$config['base_url']	= 'https://microsites.orchestra.io/';//(@$_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https' : 'http') . '://morning-leaf-2304.herokuapp.com/public/';
 }
 
 /*

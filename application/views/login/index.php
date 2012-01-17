@@ -5,12 +5,12 @@
     }
 </style>
 <?php if (validation_errors()): ?>
-    <div class="alert-message block-message error">
+    <div class="alert alert-error">
         <?php echo validation_errors() ?>
     </div>
 <?php endif ?>
 
-<?php echo form_open('', array('class'=>'horizontal-form')) ?>
+<?php echo form_open('', array('class'=>'form-horizontal')) ?>
         
 	    <legend>Please login</legend>
     

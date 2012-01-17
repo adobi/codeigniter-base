@@ -20,7 +20,7 @@
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/colorpicker/farbtastic.css" media="all" />
         
         <script src = "http://code.jquery.com/jquery-1.7.min.js"></script>
-        <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js"></script>
 
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-dropdown.js"></script>
         <script src = "<?php echo base_url() ?>scripts/plugins/bootstrap-tab.js"></script>
@@ -67,6 +67,7 @@
               </ul>
               <div class="pull-right">
                   <ul class="nav">
+                      <li class="vertical-divider"></li>
                       <li><a href="<?php echo base_url() ?>auth/logout" style="font-weight:bold"><i class="w off-w"></i>Logout</a></li>
                   </ul>
               </div>

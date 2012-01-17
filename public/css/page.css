@@ -1,28 +1,4 @@
-﻿.tabs a {
-    border:1px solid #ddd!important;
-}
-.tabs span, .pills span {
-    font-weight:bold;
-    position:relative;
-    top:10px;
-    padding: 0 10px;
-    display:inline-block;
-    color:#000;
-}
-
-#main-nav {
-    margin-top:30px;
-}
-
-#main-nav li a {
-    border:0px!important;
-}
-
-#main-nav .active a {
-    border:1px solid #ddd !important;
-    border-bottom:0px!important;
-}
-
+﻿
 .item {
     background:rgba(0, 0, 0, 0.0); 
     //border-bottom:1px solid #eee;
@@ -43,15 +19,6 @@
     margin-bottom:0px;
 }
 
-#video-items .item {
-    //width:450px!important;
-}
-/*
-#video-items .item:nth-child(even), .store-items .item:nth-child(even) {
-    float:right!important;
-    margin-right:0px!important;
-}
-*/
 .item-nav {
     text-align: right;
 }
@@ -96,19 +63,6 @@
 }
 
 
-.clearfix:nth-child(even) {
-    background:#fafafa;
-    border-top:1px solid #f1f1f1;
-    border-bottom:1px solid #f1f1f1;
-    padding:18px 0;
-    //margin-bottom:0px;
-}
-.separator {
-    background:#E6F4F9;
-    border-radius:4px;
-    border:1px solid rgba(16,153,199,0.15);
-}
-
 i {
     margin-right:5px;
 }
@@ -139,68 +93,9 @@ table thead th {
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 }
 
-.rumor-image {
-    margin:0 auto;
-}
-
-.new-rumor {
-    display: -moz-inline-box;
-    -moz-box-orient: vertical;
-    display: inline-block;
-    vertical-align: middle;
-    vertical-align: text-top;
-    background: url('../images/td_web_sprite_icons.png')!important;
-    width: 22px;
-    height:21px;
-    background-position: -60px -50px!important;
-    margin-top:-3px;  
-    opacity:0.25;
-}
-
-.nav .active .new-rumor, .settings, .nav .active .w {
-    opacity:1!important;
-}
-
-.settings {
-    display: -moz-inline-box;
-    -moz-box-orient: vertical;
-    display: inline-block;
-    vertical-align: middle;
-    vertical-align: text-top;
-    background: url('../images/td_web_sprite_icons.png');
-    width: 25px;
-    height: 21px;
-    background-position: -120px -50px;
-    margin-top:-4px;
-    margin-right:0px;
-    opacity:0.25;
-}
-
 .secondary {
     font-size:16px;
     margin-left:20px;
-}
-
-.pagination a:hover, .pagination .active a {
-  background-color: #FFDBED;
-  background-color: rgba(141, 192, 219, 0.25);
-}
-
-/*
-.pagination a {
-    color:#FE0086;
-}
-
-.pagination .active a {
-    background:#ddd;
-}
-*/
-
-.active-rumor {
-    background:#FFEDED;//#F7EEDC;
-}
-.inactive-rumor {
-    background:#E6F2DE;//#E6F7DC;
 }
 
 .btn-large {
