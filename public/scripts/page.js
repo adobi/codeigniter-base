@@ -164,13 +164,13 @@
         
         //$('.pills').pills();
         //$('.tabs').pills();
-        /*
-        if ($('#redactor').length)
-            $('#redactor').redactor({ lang: 'en' });
-            
+        
+        if ($('#redactor').length) {
+            $('#redactor').redactor({ lang: 'en', toolbar: 'mini' });
+        }
             
         $(".fancybox").fancybox();
-        */    
+        
         $(".chosen").chosen({
             no_results_text: "No results matched", 
         }); 

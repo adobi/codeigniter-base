@@ -36,7 +36,7 @@
             <div class="container">
               <a href="<?php echo  base_url() ?>" class="brand"><?php echo SITE_TITLE ?></a>
               <ul class="nav">
-                  <li class="active"><a href="#">Dashboard</a></li>
+                  <li class="active"><a href="<?php echo base_url() ?>dashboard">Dashboard</a></li>
               </ul>
               <div class="pull-right">
                   <ul class="nav">

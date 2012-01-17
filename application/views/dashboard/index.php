@@ -1,0 +1,1 @@
+<textarea name="" id="redactor" cols="30" rows="10"  style="width:100%; height: 320px;"></textarea>

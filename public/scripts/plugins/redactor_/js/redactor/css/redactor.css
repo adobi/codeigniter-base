@@ -195,7 +195,7 @@ body .imp_redactor_toolbar li a.imp_btn_format_clean { background-position: -928
 #redactor_imp_modal {
 	background-color: #fff;
 	position: fixed;
-	top: 30%;
+	top: 50%;
 	left: 50%;
 	box-shadow: 0px 5px 20px #333;
 	-webkit-box-shadow: 0 5px 20px #333; 
@@ -224,8 +224,5 @@ body .imp_redactor_toolbar li a.imp_btn_format_clean { background-position: -928
 	font-size: 12px !important;
 	padding: 5px !important;
 	border: none !important;
-}
-#redactor_table_rows, #redactor_table_columns {
-    width:auto!important;
 }
 
