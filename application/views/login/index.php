@@ -1,9 +1,4 @@
 
-<style type="text/css">
-    .content {
-        margin-top:30px!important;
-    }
-</style>
 <?php if (validation_errors()): ?>
     <div class="alert alert-error">
         <?php echo validation_errors() ?>
