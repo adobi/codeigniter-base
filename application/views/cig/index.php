@@ -1,11 +1,11 @@
 
 <?php if (validation_errors()): ?>
-    <div class="alert-message block-message error">
+    <div class="alert alert-error">
         <?php echo validation_errors() ?>
     </div>
 <?php endif ?>
 
-    <?php echo form_open(base_url().'cig/index/' . ($_POST && ($controller || $model || $view) ? 'generate' : ''), array('id'=>'edit-form', 'class'=>'horizontal-form')) ?>    
+    <?php echo form_open(base_url().'cig/index/' . ($_POST && ($controller || $model || $view) ? 'generate' : ''), array('id'=>'edit-form', 'class'=>'form-horizontal')) ?>    
         <legend>CRUD Generator</legend>
      
         <fieldset class="control-group">
@@ -40,12 +40,6 @@
         </fieldset> 
     <?php echo form_close(); ?>
 
-<script type="text/javascript">
-    $(function() {
-        $('#sidebar').remove();
-        //$('#content').css('margin-top', 0).removeClass('span-20').addClass('span-24')
-    })
-</script>
 <?php if ($controller): ?>
     <legend>Controller</legend>
     
