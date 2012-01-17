@@ -30,7 +30,6 @@
     
     <body>    
         	
-        
         <?php if ($this->session->userdata('logged_in')): ?>
             <div class="navbar navbar-fixed">
               <div class="navbar-inner">
