@@ -23,7 +23,9 @@
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/fancybox/jquery.fancybox.css" media="all" />
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/chosen/chosen.css" media="all" />
         <link rel = "stylesheet" href="<?= base_url() ?>scripts/plugins/google-code-prettify/prettify.css" media="all" />
-
+        <!-- 
+        <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+         -->
     </head>
     
     <body>    

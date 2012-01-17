@@ -769,7 +769,7 @@ function detectWebkit()
 		get_selection: function ()
 		{
 			if (this.frame.get(0).contentWindow.getSelection) return this.frame.get(0).contentWindow.getSelection();
-			else if (this.frame.get(0).contentWindow.document.selection) return this.frame.contentWindow.get(0).document.selection.createRange();
+			else if (this.frame.get(0).contentWindow.document.selection) return this.frame.get(0).contentWindow.document.selection.createRange();
 		},				
 		
 		setCut: function()
