@@ -7,7 +7,7 @@
     </div>
 <?php endif ?>
 
-<?php echo form_open('', array('id'=>'edit-form', 'class'=>'horizontal-form')) ?>    
+<?php echo form_open('', array('id'=>'edit-form', 'class'=>'form-horizontal')) ?>    
 
     <legend>
         <?php if ($item): ?>
