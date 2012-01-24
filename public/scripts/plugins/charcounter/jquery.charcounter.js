@@ -7,6 +7,7 @@
             warningColor: '#600',
             exceededColor: '#e00',
             defaultColor: '#aaa',
+            notAllowOverflow: true,
         };
 
     function Charcounter( element, options ) 
@@ -41,27 +42,53 @@
             })
             .html($('<span />', {'class': 'char-counter', 'html': this.options.limit}))
         );
-         
-        self.on('keyup focus blur', function() {
-            that.handle($(this).val().length)
+        
+        self.on('charcounter.recount keyup change focus blur', function(e) {
+            
+            if (that.options.notAllowOverflow) {
+                
+                if (!that.handle($(this).val())) {
+                    //console.log($(this).val().substring(0, that.options.limit));
+                    $(this).val($(this).val().substring(0, that.options.limit));
+                }
+            } else {
+                that.handle($(this).val());
+            }
         });
         
-        that.handle(self.val().length);
+        that.handle(self.val());
     };
     
     Charcounter.prototype.handle = function(value)
     {
         var self = $(this.element), 
-            span = self.parent().find('.char-counter')
-            val = this.options.limit - value;
+            span = self.parent().find('.char-counter'),
+            size = value.length,
+            val = this.options.limit - size,
+            flag;
         
+        
+        
+        if (val <= this.options.limit) {
+            span.css('color', this.options.defaultColor);
+            
+            flag = true;
+        }
+        
+        if (val < this.options.warning) {
+            span.css('color', this.options.warningColor);
+            
+            flag = true;
+        }
+        
+        if (val <= 0) {
+            span.css('color', this.options.exceededColor);
+            
+            flag = false;
+            val = 0;
+        }
         span.html(val);
-        
-        if (val <= this.options.limit) span.css('color', this.options.defaultColor);
-        
-        if (val < this.options.warning) span.css('color', this.options.warningColor);
-        
-        if (val < 0) span.css('color', this.options.exceededColor);
+        return flag;
     };
     
     $.fn[pluginName] = function ( options ) 
