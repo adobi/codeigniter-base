@@ -7,7 +7,9 @@ var RTOOLBAR = {
 		{
 			p: 			{exec: 'formatblock', name: '<p>', title: RLANG.paragraph},
 			blockquote: {exec: 'formatblock', name: '<blockquote>', title: RLANG.quote},
-			code: 		{exec: 'formatblock', name: '<pre>', title: RLANG.code}
+			code: 		{exec: 'formatblock', name: '<pre>', title: RLANG.code},
+			h2: 		{exec: 'formatblock', name: '<h2>', title: RLANG.header1, style: 'font-size: 18px;'},
+			h3: 		{exec: 'formatblock', name: '<h3>', title: RLANG.header2, style: 'font-size: 14px; font-weight: bold;'}					
 		}
 	},
 	format: 

@@ -6,82 +6,94 @@
         margin-left:110px;
     }
     #redactorInsertLinkForm label {
-        width: 90px;
+        width: 100px;
     }
 </style>
 
+
+
 <form id="redactorInsertLinkForm" class="form-horizontal">
-    <fieldset class="control-group">
-        <div class="controls">
-            <label class="checkbox inline" for="redactor_link_id_url">
-		        <input value="link" name="redactor_link" id="redactor_link_id_url" type="radio" onclick="$('#redactor_link_url_name').text('URL')" checked="checked">
-                %RLANG.web%
-            </label>		        
-            <label class="checkbox inline" for="redactor_link_id_email">
-                <input value="email" name="redactor_link" id="redactor_link_id_email" onclick="$('#redactor_link_url_name').text('%RLANG.mailto%')"  type="radio">
-                %RLANG.mailto%
-            </label>
+    <ul class="tabs nav">
+        <li class="active"><a href="#general" data-toggle="tab">1. Set up the link</a></li>
+        <li><a href="#analytics" data-toggle="tab">2. Set up Google Analytics</a></li>
+    </ul>
+    
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="general">
+                
+            <fieldset class="control-group">
+                <div class="controls">
+                    <label class="checkbox inline" for="redactor_link_id_url">
+        		        <input value="link" name="redactor_link" id="redactor_link_id_url" type="radio" onclick="$('#redactor_link_url_name').text('URL')" checked="checked">
+                        %RLANG.web%
+                    </label>		        
+                    <label class="checkbox inline" for="redactor_link_id_email">
+                        <input value="email" name="redactor_link" id="redactor_link_id_email" onclick="$('#redactor_link_url_name').text('%RLANG.mailto%')"  type="radio">
+                        %RLANG.mailto%
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset class="control-group">
+                <label for="" class="control-label" id="redactor_link_url_name">URL</label>
+                <div class="controls">
+                    <input name="redactor_link_url" id="redactor_link_url" />
+                </div>
+            </fieldset>    
+            <fieldset class="control-group">
+                <label for="" class="control-label">%RLANG.text%</label>
+                <div class="controls">
+                    <input name="redactor_link_text" id="redactor_link_text" />
+                </div>
+            </fieldset>    
+            <fieldset class="control-group">
+                <label for="" class="control-label">%RLANG.title%</label>
+                <div class="controls">
+                    <input name="redactor_link_title" id="redactor_link_title"  />
+                </div>
+            </fieldset>   
         </div>
-    </fieldset>
-    <fieldset class="control-group">
-        <label for="" class="control-label" id="redactor_link_url_name">URL</label>
-        <div class="controls">
-            <input name="redactor_link_url" id="redactor_link_url" />
-        </div>
-    </fieldset>    
-    <fieldset class="control-group">
-        <label for="" class="control-label">%RLANG.text%</label>
-        <div class="controls">
-            <input name="redactor_link_text" id="redactor_link_text" />
-        </div>
-    </fieldset>    
-    <fieldset class="control-group">
-        <label for="" class="control-label">%RLANG.title%</label>
-        <div class="controls">
-            <input name="redactor_link_title" id="redactor_link_title"  />
-        </div>
-    </fieldset>   
-    <div id="google_analytics" style="display:none;">
-        <fieldset class="control-group">
-            <label for="" class="control-label">Category</label>
-            <div class="controls">
-                <input name="redactor_link_category" id="redactor_link_category"  />
-            </div>
-        </fieldset>    
-        <fieldset class="control-group">
-            <label for="" class="control-label">Action</label>
-            <div class="controls">
-                <select name="redactor_link_action" id = "redactor_link_action">
-                    <option value="Click">Click</option>
-                    <option value="Play">Play</option>
-                    <option value="View">View</option>
-                </select>
-            </div>
-        </fieldset>    
-        <fieldset class="control-group">
-            <label for="" class="control-label">Label</label>
-            <div class="controls">
-                <input name="redactor_link_label" id="redactor_link_label" />
-            </div>
-        </fieldset>    
-        <fieldset class="control-group">
-            <label for="" class="control-label">Value</label>
-            <div class="controls">
-                <input name="redactor_link_value" id="redactor_link_value" value = "1" />
-            </div>
-        </fieldset>  
-        <fieldset class="control-group">
-            <label for="" class="control-label">Non interaction</label>
-            <div class="controls">
-                <input type="checkbox" name="redactor_link_noninteraction" id="redactor_link_noninteraction" value = "1" />
-            </div>
-        </fieldset>            
-    </div> 
- 
+        <div class="tab-pane fade in" id="analytics" style="_display:none;">
+            <fieldset class="control-group">
+                <label for="" class="control-label">Category</label>
+                <div class="controls">
+                    <input name="redactor_link_category" id="redactor_link_category"  />
+                </div>
+            </fieldset>    
+            <fieldset class="control-group">
+                <label for="" class="control-label">Action</label>
+                <div class="controls">
+                    <select name="redactor_link_action" id = "redactor_link_action">
+                        <option value="Click">Click</option>
+                        <option value="Play">Play</option>
+                        <option value="View">View</option>
+                    </select>
+                </div>
+            </fieldset>    
+            <fieldset class="control-group">
+                <label for="" class="control-label">Label</label>
+                <div class="controls">
+                    <input name="redactor_link_label" id="redactor_link_label" />
+                </div>
+            </fieldset>    
+            <fieldset class="control-group">
+                <label for="" class="control-label">Value</label>
+                <div class="controls">
+                    <input name="redactor_link_value" id="redactor_link_value" value = "1" />
+                </div>
+            </fieldset>  
+            <fieldset class="control-group">
+                <label for="" class="control-label">Non interaction</label>
+                <div class="controls">
+                    <input type="checkbox" name="redactor_link_noninteraction" id="redactor_link_noninteraction" value = "1" />
+                </div>
+            </fieldset>            
+        </div> 
+    </div>
     <fieldset class="form-actions">
-        <input type="button" name="" id="" value="%RLANG.insert%" onclick="redactorActive.insertLink();"  class="btn primary"/>&nbsp;
-        <a class="btn primary" href="javascript:void(0)" onclick="$('#google_analytics').toggle(); $('#redactor_imp_modal').css('height', 'auto')">Google Analytics settings</a>&nbsp;
-        <input type="button" name="" onclick="redactorActive.modalClose();" value="%RLANG.cancel%"  class="btn primary" />&nbsp;
+        
+        <button name="" id="" onclick="redactorActive.insertLink();"  class="btn primary"><i class="ok"></i>%RLANG.insert%</button> &nbsp;
+        <!-- <a class="btn primary" href="javascript:void(0)" onclick="$('#analytics').toggle(); $('#redactor_imp_modal').css('height', 'auto')">Google Analytics settings</a>&nbsp; -->
+        <input type="button" name="" onclick="redactorActive.modalClose();" value="%RLANG.cancel%"  class="btn" />&nbsp;
         
     </fieldset>    
 </form>

@@ -1222,7 +1222,7 @@ function detectWebkit()
 						
 			}.bind2(this);
 
-			this.modalInit(RLANG.link, this.opts.path + 'plugins/link.html', 500, 340, handler);
+			this.modalInit(RLANG.link, this.opts.path + 'plugins/link.html', 500, 360, handler);
 	
 		},	
 		insertLink: function()
@@ -1305,11 +1305,11 @@ function detectWebkit()
 			
 			if ($('#redactor_imp_modal').size() == 0)
 			{
-				this.modal = $('<div id="redactor_imp_modal" style="display: none;"><div id="redactor_imp_modal_close"></div><div id="redactor_imp_modal_header"></div><div id="redactor_imp_modal_inner"></div></div>');
+				this.modal = $('<div class = "ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" id="redactor_imp_modal" style="display: none; font-family:inherit;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" id="redactor_imp_modal_header" style="padding:0.7em 1em 0.6em; font-size:14px;"><span id="redactor_imp_modal_title"></span><a href="javascript:void(0);" class="ui-dialog-titlebar-close ui-corner-all" role="button" id="redactor_imp_modal_close2"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="redactor_imp_modal_inner" style="padding:10px 30px;"></div></div>');
 				$('body').append(this.modal);
 			}
 			
-			$('#redactor_imp_modal_close').click(function() { this.modalClose(); }.bind2(this));
+			$('#redactor_imp_modal_close2').click(function() { this.modalClose(); }.bind2(this));
 			$(document).keyup(function(e) { if( e.keyCode == 27) this.modalClose(); }.bind2(this));
 			$(this.doc).keyup(function(e) { if( e.keyCode == 27) this.modalClose(); }.bind2(this));			
 
@@ -1325,19 +1325,19 @@ function detectWebkit()
 					});
 					
 					$('#redactor_imp_modal_inner').html(data);
-					$('#redactor_imp_modal_header').html(title);
+					$('#redactor_imp_modal_title').html(title);
 					
 					if (height === false) theight = 'auto';
 					else theight = height + 'px';
 					
-					$('#redactor_imp_modal').css({ width: width + 'px', height: theight, marginTop: '-' + height/2 + 'px', marginLeft: '-' + width/2 + 'px' }).fadeIn('fast');					
+					$('#redactor_imp_modal').css({ width: width + 'px', 'min-height': theight, 'height': 'auto', marginTop: '-' + height/2 + 'px', marginLeft: '-' + width/2 + 'px' }).fadeIn('fast');					
 
 					if (scroll === true)
 					{					
 						$('#imp_redactor_table_box').height(height-$('#redactor_imp_modal_header').outerHeight()-130).css('overflow', 'auto');						
 					}
 					
-					this.addBootstrapStyle();
+					//this.addBootstrapStyle();
 					
 					if (typeof(handler) == 'function') handler();
 
