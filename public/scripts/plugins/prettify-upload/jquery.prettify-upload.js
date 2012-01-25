@@ -21,17 +21,8 @@
             text:'select a file',
             
         };
-    var wrapper = $('<div />', {'class': 'input-file-wrapper'}).css({
-        cursor:'pointer',
-        width:'120px',
-        height:'35px',
-        display:'inline-block',
-        overflow:'hidden',
-        position:'relative',
-        marginBottom:'10px',
-    });
+
     
-    var button = $('<button />');
     
     // The actual plugin constructor
     function PrettifyUpload( element, options ) {
@@ -61,6 +52,18 @@
             width: '120px',
         });
         
+        var wrapper = $('<div />', {'class': 'input-file-wrapper'}).css({
+            cursor:'pointer',
+            width:'120px',
+            height:'35px',
+            display:'inline-block',
+            overflow:'hidden',
+            position:'relative',
+            marginBottom:'10px',
+        });        
+        
+        var button = $('<button />');
+        
         button
             .addClass(this.options.buttonClass)
             .html($('<i />').addClass(this.options.iconClass))
@@ -68,10 +71,10 @@
         
         $(this.element).wrap(wrapper);    
         
-        $(this.element).parents('.input-file-wrapper').prepend(button);
-        
+        $(this.element).parents('.input-file-wrapper:first').prepend(button);
+        //console.log($(this.element));
         //$('body').delegate('input[type=file]', 'change', function() {
-        $('input[type=file]').bind('change', function() {
+        $(this.element).bind('change', function() {
             var self = $(this);
             self.parents('.input-file-wrapper')
                 .after($('<p />')
@@ -87,10 +90,6 @@
                     )                    
                 );            
         });
-        
-        $('body').delegate('.input-file-remove', 'click', function() {
-            
-        })
         
     };
 
