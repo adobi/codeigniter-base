@@ -1,6 +1,12 @@
-            </div> <!-- /content -->   
-
-        
+              </div> <!-- well -->
+            </div> <!-- content-wrapper -->
+            <?php if ($this->session->userdata('logged_in')): ?>
+        	    <div class="span3 sidebar-navigation-wrapper-right">
+          	    <div class="well">
+                </div> <!-- well -->
+              </div>
+            <?php endif ?>
+          </div> <!-- /content -->   
         </div> <!-- /container -->
 		
 		<div id="loading-global">Working...</div>		

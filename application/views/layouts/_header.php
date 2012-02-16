@@ -31,24 +31,56 @@
     <body>    
         	
         <?php if ($this->session->userdata('logged_in')): ?>
-            <div class="navbar navbar-fixed">
+
+            <div class="navbar navbar-fixed-top">
               <div class="navbar-inner">
-                <div class="container">
-                  <a href="<?php echo  base_url() ?>" class="brand"><?php echo SITE_TITLE ?></a>
-                  <ul class="nav">
-                      <li class="active"><a href="<?php echo base_url() ?>dashboard">Dashboard</a></li>
-                  </ul>
-                  <div class="pull-right">
-                      <ul class="nav">
-                          <li class="vertical-divider"></li>
-                          <li><a href="<?php echo base_url() ?>auth/logout" style="font-weight:bold"><i class="icon-off icon-white"></i>Logout</a></li>
-                      </ul>
-                  </div>
+                <div class="container-fluid">
+                  <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a href="#" class="span1 brand" style="margin-top:10px; margin-right:3px;">
+                    <i class="home"></i>
+                    <?php //echo SITE_TITLE ?>
+                  </a>
+                  <div class="nav-collapse">
+                    <ul class="nav">
+                      <li class="active"><a href="<?php echo base_url() ?>dashboard"><i class="dashboard"></i>Dashboard</a></li>
+                    </ul>
+                    <div class="pull-right" style="margin-top:10px;">
+                        <form action="" class="navbar-search pull-left">
+                          <!-- <input type="text" placeholder="Search" class="search-query span3"> -->
+                          <select name="" id="" class="chosen span4">
+                            <option>Name of the game</option>
+                            <option>Name of the game</option>
+                            <option>Name of the game</option>
+                            <option>Name of the game</option>
+                            <option>Name of the game</option>
+                            <option>Name of the game</option>
+                            <option>Name of the game</option>
+                          </select>
+                        </form>                        
+                        <ul class="nav">
+                            <li class="vertical-divider"></li>
+                            <li><a href="<?php echo base_url() ?>auth/logout" style="font-weight:bold"><i class="icon-off icon-white"></i>Logout</a></li>
+                        </ul>
+                    </div>
+    
+                  </div><!--/.nav-collapse -->
                 </div>
               </div>
-            </div>    
+            </div>               
         <?php endif ?>    
-        <div class="container" id="top">
-        	<div class="content" style="margin-top:70px;">
-
+        <div class="container-fluid" id="container" style="padding-left:0px;">
+        	<div class="content row-fluid" style="margin-top:60px;">
+        	  <?php if ($this->session->userdata('logged_in')): ?>
+          	  <div class="span1 sidebar-navigation-wrapper-left">
+          	    <div class="sidebar-nav">
+          	    </div>
+          	  </div>
+        	  <?php endif ?>
+        	  <div class="span8 content-wrapper">
+        	    <div class="well">
+                
                 
