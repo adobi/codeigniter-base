@@ -7,7 +7,7 @@
 // ---------
 
 p {
-  margin-bottom: @baseLineHeight / 2;
+  margin: 0 0 @baseLineHeight / 2;
   font-family: @baseFontFamily;
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
@@ -16,16 +16,23 @@ p {
     color: @grayLight;
   }
 }
-
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+}
 
 // HEADINGS
 // --------
 
 h1, h2, h3, h4, h5, h6 {
+  margin: 0;
   font-weight: bold;
   color: @grayDark;
   text-rendering: optimizelegibility; // Fix the character spacing for headings
   small {
+    font-weight: normal;
     color: @grayLight;
   }
 }
@@ -68,12 +75,24 @@ h6 {
   text-transform: uppercase;
 }
 
+// Page header
+.page-header {
+  padding-bottom: @baseLineHeight - 1;
+  margin: @baseLineHeight 0;
+  border-bottom: 1px solid @grayLighter;
+}
+.page-header h1 {
+  line-height: 1;
+}
+
+
 
 // LISTS
 // -----
 
 // Unordered and Ordered lists
 ul, ol {
+  padding: 0;
   margin: 0 0 @baseLineHeight / 2 25px;
 }
 ul ul,
@@ -119,18 +138,15 @@ hr {
   margin: @baseLineHeight 0;
   border: 0;
   border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid @white;
 }
 
 // Emphasis
 strong {
-  font-style: inherit;
   font-weight: bold;
 }
 em {
   font-style: italic;
-  font-weight: inherit;
-  line-height: inherit;
 }
 .muted {
   color: @grayLight;
@@ -146,9 +162,9 @@ abbr {
 
 // Blockquotes
 blockquote {
-  padding-left: 15px;
-  margin-bottom: @baseLineHeight;
-  border-left: 5px solid #eee;
+  padding: 0 0 0 15px;
+  margin: 0 0 @baseLineHeight;
+  border-left: 5px solid @grayLighter;
   p {
     margin-bottom: 0;
     #font > .shorthand(16px,300,@baseLineHeight * 1.25);
@@ -168,7 +184,7 @@ blockquote {
     padding-left: 0;
     padding-right: 15px;
     border-left: 0;
-    border-right: 5px solid #eee;
+    border-right: 5px solid @grayLighter;
     p,
     small {
       text-align: right;
@@ -176,48 +192,26 @@ blockquote {
   }
 }
 
+// Quotes
+q:before,
+q:after,
+blockquote:before, 
+blockquote:after {
+  content: "";
+}
+
 // Addresses
 address {
   display: block;
   margin-bottom: @baseLineHeight;
   line-height: @baseLineHeight;
+  font-style: normal;
 }
 
-// Inline and block code styles
-code,
-pre {
-  padding: 0 3px 2px;
-  #font > #family > .monospace;
-  font-size: 12px;
-  color: @grayDark;
-  .border-radius(3px);
+// Misc
+small {
+  font-size: 100%;
 }
-code {
-  padding: 1px 3px;
-  background-color: lighten(@orange, 40%);
-}
-pre {
-  display: block;
-  padding: (@baseLineHeight - 1) / 2;
-  margin: 0 0 @baseLineHeight / 2;
-  font-size: 12px;
-  line-height: @baseLineHeight;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0,0,0,.15);
-  .border-radius(4px);
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-
-  // Make prettyprint styles more spaced out for readability
-  &.prettyprint {
-    margin-bottom: @baseLineHeight;
-  }
-
-  // Account for some code outputs that place code tags in pre tags
-  code {
-    padding: 0;
-    background-color: transparent;
-  }
+cite {
+  font-style: normal;
 }

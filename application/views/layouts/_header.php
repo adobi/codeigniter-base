@@ -41,7 +41,7 @@
                   <div class="pull-right">
                       <ul class="nav">
                           <li class="vertical-divider"></li>
-                          <li><a href="<?php echo base_url() ?>auth/logout" style="font-weight:bold"><i class="w off-w"></i>Logout</a></li>
+                          <li><a href="<?php echo base_url() ?>auth/logout" style="font-weight:bold"><i class="icon-off icon-white"></i>Logout</a></li>
                       </ul>
                   </div>
                 </div>

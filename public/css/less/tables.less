@@ -4,39 +4,47 @@
 // ----------------------------------------
 
 
+// BASE TABLES
+// -----------------
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 // BASELINE STYLES
 // ---------------
 
-table {
+.table {
   width: 100%;
   margin-bottom: @baseLineHeight;
-}
-th,
-td {
-  padding: 8px;
-  line-height: @baseLineHeight;
-  text-align: left;
-  border-top: 1px solid #ddd;
-}
-th {
-  font-weight: bold;
-  vertical-align: bottom;
-}
-td {
-  vertical-align: top;
+  // Cells
+  th,
+  td {
+    padding: 8px;
+    line-height: @baseLineHeight;
+    text-align: left;
+    border-top: 1px solid #ddd;
+  }
+  th {
+    font-weight: bold;
+    vertical-align: bottom;
+  }
+  td {
+    vertical-align: top;
+  }
+  // Remove top border from thead by default
+  thead:first-child tr th,
+  thead:first-child tr td {
+    border-top: 0;
+  }
+  // Account for multiple tbody instances
+  tbody + tbody {
+    border-top: 2px solid #ddd;
+  }
 }
 
-// Remove top border from thead by default
-thead:first-child tr th,
-thead:first-child tr td {
-  border-top: 0;
-}
-
-// Account for multiple tbody instances
-tbody + tbody {
-  border-top: 2px solid #ddd;
-}
 
 
 // CONDENSED TABLE W/ HALF PADDING
@@ -56,6 +64,7 @@ tbody + tbody {
 .table-bordered {
   border: 1px solid #ddd;
   border-collapse: separate; // Done so we can round those corners!
+  *border-collapse: collapsed; // IE7 can't round corners anyway
   .border-radius(4px);
   th + th,
   td + td,
@@ -127,58 +136,4 @@ table {
   .span10    { .tableColumns(10); }
   .span11    { .tableColumns(11); }
   .span12    { .tableColumns(12); }
-}
-
-
-
-// TABLESORTER
-// -----------
-// Support for the tablesorter jQuerdy plugin
-
-table {
-  // Tablesorting styles w/ jQuery plugin
-  .header {
-    cursor: pointer;
-    &:after {
-      content: "";
-      float: right;
-      margin-top: 7px;
-      border-width: 0 4px 4px;
-      border-style: solid;
-      border-color: #000 transparent;
-      visibility: hidden;
-    }
-  }
-  // Style the sorted column headers (THs)
-  .headerSortUp,
-  .headerSortDown {
-    background-color: #f7f7f9;
-    text-shadow: 0 1px 1px rgba(255,255,255,.75);
-  }
-  // Style the ascending (reverse alphabetical) column header
-  .header:hover {
-    &:after {
-      visibility:visible;
-    }
-  }
-  // Style the descending (alphabetical) column header
-  .headerSortDown,
-  .headerSortDown:hover {
-    &:after {
-      visibility:visible;
-      .opacity(60);
-    }
-  }
-  // Style the ascending (reverse alphabetical) column header
-  .headerSortUp {
-    &:after {
-      border-bottom: none;
-      border-left: 4px solid transparent;
-      border-right: 4px solid transparent;
-      border-top: 4px solid #000;
-      visibility:visible;
-      .box-shadow(none); //can't add boxshadow to downward facing arrow :(
-      .opacity(60);
-    }
-  }
 }

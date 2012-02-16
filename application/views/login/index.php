@@ -22,7 +22,7 @@
             </div>
         </fieldset>
         <fieldset class="form-actions">
-            <input type="submit" value="Login" class="btn primary">
+            <button type="submit" class="btn btn-primary">Login</button> <a href="#" class="btn btn-orange">Hello</a>
         </fieldset> 
 
 <?php echo form_close() ?>
