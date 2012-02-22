@@ -1,5 +1,5 @@
 <p>
-    <a class="btn primary" href="<?= base_url(); ?>%%CONTROLLER%%/edit">Create new</a>
+    <a class="btn btn-primary" href="<?= base_url(); ?>%%CONTROLLER%%/edit"><i class="icon-plus"></i>Create new</a>
 </p>
 
 <?php if ($items): ?>
@@ -12,8 +12,8 @@
             <?php endforeach ?>
         </fieldset>
         <fieldset class="form-actions" style="text-align:right;">
-            <a href="<?php echo base_url() ?>%%CONTROLLER%%/edit/<?php echo $item->id ?>" class="btn primary"><i class="edit"></i>Edit</a>
-            <a href="<?php echo base_url() ?>%%CONTROLLER%%/delete/<?php echo $item->id ?>" class="btn danger"><i class="trash"></i>Delete</a>
+            <a href="<?php echo base_url() ?>%%CONTROLLER%%/edit/<?php echo $item->id ?>" class="btn btn-primary"><i class="icon-edit"></i>Edit</a>
+            <a href="<?php echo base_url() ?>%%CONTROLLER%%/delete/<?php echo $item->id ?>" class="btn btn-danger"><i class="icon-trash"></i>Delete</a>
         </fieldset>
     <?php endforeach ?>
 <?php endif ?>

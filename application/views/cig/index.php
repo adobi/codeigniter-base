@@ -30,10 +30,10 @@
             </div>
         </fieldset>                  
         <fieldset class="form-actions">
-            <button class="btn primary"><i class="search"></i>View code</button> 
+            <button class="btn btn-primary"><i class="icon-search"></i>View code</button> 
             <?php if (!$_POST || validation_errors()): ?>
             <?php else: ?>
-                &nbsp;<button class="btn primary"><i class="time"></i>Generate code</button> 
+                &nbsp;<button class="btn btn-primary"><i class="icon-time"></i>Generate code</button> 
             <?php endif ?>
             &nbsp; <a class="btn" href="<?php echo base_url() ?>/<?php echo $this->uri->segment(1) ?>">Cancel</a>
             
