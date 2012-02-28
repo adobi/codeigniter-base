@@ -1,4 +1,5 @@
 A basic setup for a new project including:
+
 * codeigniter
   * template library
   * new Model class with common functionality
