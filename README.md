@@ -1,9 +1,23 @@
-A basic setup for a new project including:
+##A basic setup for a new project including:
 
-* codeigniter
-  * template library
+* __codeigniter__
+  * template library and a basic layout (login, dashboard)
   * new Model class with common functionality
+  * some helper functions
+  * basic authentication from file (login, logout functionality)
+  * code generation tool (controller with index/edit/delete actions, models, view for index/edit)
  
-* jquery
-  * lot of plugins (twitter's bootstrap js, slidejs, headjs, lessjs, ...)
-* twitter's bootstrap css
+* __jquery__
+* __jquery plugins__
+  * twitter's bootstrap js
+  * slidejs
+  * headjs
+  * lessjs
+  * chosen
+  * colorpicker
+  * redactor
+  * charcounter
+  * prettify-upload
+  * ...
+* __style__
+  * twitter's bootstrap css
